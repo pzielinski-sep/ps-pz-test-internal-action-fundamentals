@@ -23,4 +23,4 @@ jobs:
         with:
           who-to-greet: ${{ inputs.who-to-greet }}
       - name: show output
-        run: echo "The time was $ {{ steps.action-checker.outputs.time }} whe nthe action said heelo"
+        run: echo "The time was $ {{ steps.action-checker.outputs.time }} when the action said heello"
