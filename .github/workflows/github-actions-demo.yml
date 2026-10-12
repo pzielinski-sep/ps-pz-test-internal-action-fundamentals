@@ -12,7 +12,6 @@ jobs:
   Build:
     runs-on: ubuntu-22.04
     steps:
-      - name: Run echo scripts
       - run: |
           echo "The job was triggered by event ${{ github.event_name }}"
           echo "The name of this branch is ${{ github.ref }} and your repo is ${{ github.repository }}."
