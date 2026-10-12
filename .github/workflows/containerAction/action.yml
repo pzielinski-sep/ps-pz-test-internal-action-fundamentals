@@ -1,18 +1,21 @@
-name: Say Hi!
-description: Say hi and save
+name: Hello World
+description: Greet someone and record the time
 author: pziel
 
+# Define your inputs here.
 inputs:
   who-to-greet:
-    description: "who should we say hi to"
-    default: 'World'
+    description: Who to greet
+    required: true
+    default: World
 
+# Define your outputs here.
 outputs:
   time:
-    description: "The time we were ok"
+    description: The time we greeted you
 
 runs:
   using: docker
-  image: dockerfile
-  args:
-    - ${{ some arg }} 
+  image: Dockerfile
+  env:
+    INPUT_WHO_TO_GREET: ${{ inputs.who-to-greet }}
