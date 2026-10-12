@@ -1,4 +1,4 @@
-name: GitHub Actions Demo Fix
+name: GitHub Actions Demo PZ
 on:
   push:
     branches: [main]
@@ -12,9 +12,10 @@ jobs:
   Build:
     runs-on: ubuntu-22.04
     steps:
+      - name: Run echo scripts
       - run: |
           echo "The job was triggered by event ${{ github.event_name }}"
-          echo "The name of this branch is ${{ github.ref }} and your repo is ."
+          echo "The name of this branch is ${{ github.ref }} and your repo is ${{ github.repository }}."
       - uses: actions/checkout@v4
       - name: List files in repo
         run: |
