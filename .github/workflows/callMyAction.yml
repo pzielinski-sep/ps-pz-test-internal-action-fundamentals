@@ -3,7 +3,7 @@ name: Call my action
 on: 
   push:
     branches: [main]
-    paths: [container/**]
+    paths: [container*/**]
 
   workflow_dispatch:
     inputs:
